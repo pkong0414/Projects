@@ -3,19 +3,14 @@ from helpers import rotate_character
 
 def encrypt(text, rot):
     encrypted_msg = ''
-    for x in range(len(text)):
-        encrypted_msg += rotate_character(text[x],rot)
-
-    return encrypted_msg
+    for x in range(len(message)):
+        encrypted_msg += rotate_character(message[x],argv[1])
 
 def user_input_is_valid(cl_argv):
-    if len(cl_argv) != 2:
-        return False
-    cl_args = str(cl_argv[1])
-    return cl_args.isdigit()
+    if argv[1].isdigit() is False:
+        exit()
 
 def main():
-
     message = input("Type a message: ")
     rotation = argv[1]
     encrypt(message, rotation)

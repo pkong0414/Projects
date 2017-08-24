@@ -16,5 +16,6 @@ def encrypt(text, rot):
     print(encrypted_message)
     return encrypted_message
 
+#testing output
 encrypt('a', 'a')
 encrypt('The crow flies at midnight!', 'boom')
