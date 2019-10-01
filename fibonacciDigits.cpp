@@ -8,6 +8,7 @@
  */
 
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 int main(){
@@ -68,7 +69,7 @@ for( int i = 2 ; digits <= 100 ; i++ ){
 			//cout << " = " << FN[index - d] << endl;
 			//cout << "\nDigits: " << digits;
 
-			if( (Fn1[index-d] + Fn2[index-d]) > 9 ){
+			if( (FN[index-d]) > 9 ){
 
 				//moving up digit counter and adding next digit 1 when the index needs to expand.
 				if( d + 1 == digits ){
@@ -76,7 +77,7 @@ for( int i = 2 ; digits <= 100 ; i++ ){
 				}
 
 				//assigning value to temp so it will carry over
-				temp = FN[index - d] / 10;
+				temp = floor( FN[index - d] / 10 );
 
 				//This will get rid of any extra digits for FN
 				FN[index - d] = FN[index - d] % 10;
